@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.moviedetails">
+    <ImageView
+        android:id="@+id/backimage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:foreground="#43FFFFFF"
+        android:src="@drawable/backman"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detail_image_card"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:backgroundTintMode="multiply"
+        app:cardCornerRadius="30dp">
+        <ImageView
+            android:id="@+id/icon_image"
+            android:layout_width="130dp"
+            android:layout_gravity="center"
+            android:layout_height="200dp"
+            android:src="@drawable/batman"
+            android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/content_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_image_card"
+        app:cardCornerRadius="40dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Movie Title"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_title"
+                android:layout_centerInParent="true"
+                android:text="2017"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/detail_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_year"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:text="Fearing the actions of a god-like Super Hero left unchecked, Gotham City’s own formidable, forceful vigilante takes on Metropolis’s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it’s ever known before." />
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
